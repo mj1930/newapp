@@ -1,0 +1,22 @@
+<head>
+  <title>newapp</title>
+</head>
+
+<body>
+  <h1>Test App!</h1>
+  {{> app}}
+</body>
+
+<template name="app">
+  <div>
+    <input class="col-sm-5" type="text" id="name" placeholder="please enter your name">
+    <button type="submit" class="btn-primary col-sm-5 col-sm-offset-1" id="click">Submit</button>
+  </div>
+  <br>
+  <br>
+  
+  {{#each name in names}}
+    <p class="col-sm-2">{{name.name}}</p>
+    <p class="col-sm-4">{{name.createdAt}}</p>
+  {{/each}}
+</template>
